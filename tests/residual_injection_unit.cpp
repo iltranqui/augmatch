@@ -1,4 +1,4 @@
-#include "augmatch/isp_artifacts.hpp"
+#include "augmatch/isp/isp_artifacts.hpp"
 #include <algorithm>
 #include <cassert>
 #include <cmath>

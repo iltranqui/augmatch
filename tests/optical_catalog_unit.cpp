@@ -1,6 +1,6 @@
-#include "augmatch/filter.hpp"
-#include "augmatch/color.hpp"
-#include "augmatch/geometric.hpp"
+#include "augmatch/filter/filter.hpp"
+#include "augmatch/color/color.hpp"
+#include "augmatch/geometry/geometric.hpp"
 #include <cassert>
 #include <cstdint>
 #include <vector>

@@ -1,4 +1,4 @@
-#include "augmatch/filter.hpp"
+#include "augmatch/filter/filter.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <stdexcept>

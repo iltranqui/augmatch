@@ -1,6 +1,6 @@
-#include "augmatch/bayer.hpp"
-#include "augmatch/derivative.hpp"
-#include "augmatch/noise.hpp"
+#include "augmatch/sensor/bayer.hpp"
+#include "augmatch/filter/derivative.hpp"
+#include "augmatch/sensor/noise.hpp"
 
 #include <algorithm>
 #include <chrono>

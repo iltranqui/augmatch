@@ -1,4 +1,4 @@
-#include "augmatch/noise_view.hpp"
+#include "augmatch/sensor/noise_view.hpp"
 
 #include <cuda_runtime.h>
 #include <algorithm>

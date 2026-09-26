@@ -9,7 +9,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-CATALOGS = (ROOT / "AUGMENTATION_CATALOG.md", ROOT / "NOISE_CATALOG.md")
+CATALOGS = (ROOT / "docs" / "catalogs" / "AUGMENTATION_CATALOG.md", ROOT / "docs" / "catalogs" / "NOISE_CATALOG.md")
 MARKER_STATUS = {" ": "todo", "~": "partial", "x": "implemented"}
 BULLET_RE = re.compile(r"^\s*- \[([ x~])\]\s+(.+?)\s*$")
 HEADING_RE = re.compile(r"^\s*#{2,4}\s+(.+?)\s*$")
@@ -43,12 +43,16 @@ def main() -> int:
         errors.append(f"missing umbrella header: {umbrella.relative_to(ROOT)}")
     else:
         umbrella_text = umbrella.read_text()
-        for public_header in sorted(ROOT.joinpath("include", "augmatch").glob("*.hpp")):
-            if public_header.name == "augmatch.hpp":
+        header_root = ROOT.joinpath("include", "augmatch")
+        for public_header in sorted(header_root.rglob("*.hpp")):
+            relative = public_header.relative_to(header_root).as_posix()
+            if relative == "augmatch.hpp":
                 continue
-            include = f'#include "augmatch/{public_header.name}"'
+            if "/" not in relative:
+                errors.append(f"public header outside a topic folder: {relative}")
+            include = f'#include "augmatch/{relative}"'
             if include not in umbrella_text:
-                errors.append(f"umbrella header omits public header: {public_header.name}")
+                errors.append(f"umbrella header omits public header: {relative}")
     manifest_keys = Counter((r["catalog"], r["category"], r["item"]) for r in rows)
     catalog_rows = []
     for catalog in CATALOGS:

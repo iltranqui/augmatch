@@ -1,56 +1,74 @@
 #pragma once
 // Augmatch public umbrella header. Include this file to access the complete API.
-#include "augmatch/arithmetic.hpp"
-// bayer.hpp also exposes Quad-Bayer, RGBW, and custom-mask CFA sampling.
-#include "augmatch/bayer.hpp"
-#include "augmatch/blend.hpp"
-#include "augmatch/canny.hpp"
-// color.hpp includes RGB/YCbCr photometric, gain-noise, temperature-error, chroma-subsampling, and local-tone APIs.
-#include "augmatch/color.hpp"
-#include "augmatch/colorspace.hpp"
-#include "augmatch/composition.hpp"
-#include "augmatch/convert.hpp"
-#include "augmatch/dithering.hpp"
-#include "augmatch/derivative.hpp"
-#include "augmatch/dropout.hpp"
-#include "augmatch/environmental.hpp"
-#include "augmatch/execution.hpp"
-// filter.hpp includes convolution, deterministic optical motion, and aperture PSF artifacts.
-#include "augmatch/filter.hpp"
-// geometric.hpp includes affine-compatible focus-breathing radial scaling.
-#include "augmatch/geometric.hpp"
-#include "augmatch/hsv.hpp"
-#include "augmatch/image.hpp"
-#include "augmatch/meta.hpp"
-#include "augmatch/mixing.hpp"
-#include "augmatch/iso_profile.hpp"
-#include "augmatch/imgcorruptlike.hpp"
-// isp_artifacts.hpp includes derivative, demosaicing, block-compression, quantization, and clipping-ring surrogates.
-#include "augmatch/isp_artifacts.hpp"
-#include "augmatch/jpeg.hpp"
-// noise.hpp includes sensor, row-phase temporal T-H-W-C batches, telegraph/video compression and motion surrogates, water-droplet lens records, optical gain, illumination, dust-shadow, and optical-scatter artifacts.
-#include "augmatch/noise.hpp"
-#include "augmatch/noise_view.hpp"
-#include "augmatch/native_api.hpp"
+// Each group below maps to one folder under include/augmatch/ and one page in docs/api/.
+
+// core/ — image views, pixel types, Status, ExecutionContext, dtype conversion.
+#include "augmatch/core/image.hpp"
+#include "augmatch/core/pixel.hpp"
+#include "augmatch/core/status.hpp"
+#include "augmatch/core/execution.hpp"
+#include "augmatch/core/signal.hpp"
+#include "augmatch/core/convert.hpp"
+#include "augmatch/core/easy.hpp"  // view-based convenience wrappers (augmatch::easy)
+
+// annotations/ — bounding boxes, keypoints, polygons, and their geometric transforms.
+#include "augmatch/annotations/target_metadata.hpp"
+#include "augmatch/annotations/transforms.hpp"
+
+// pipeline/ — config-driven Pipeline, stage registry, compose/one_of/some_of, meta ops.
+#include "augmatch/pipeline/pipeline.hpp"
+#include "augmatch/pipeline/pipeline_registry.hpp"
+#include "augmatch/pipeline/composition.hpp"
+#include "augmatch/pipeline/meta.hpp"
+
+// geometry/ — flips, crops, resize, affine, focus breathing, dropout, multi-image mixing.
+#include "augmatch/geometry/geometric.hpp"
+#include "augmatch/geometry/size.hpp"
+#include "augmatch/geometry/dropout.hpp"
+#include "augmatch/geometry/mixing.hpp"
+
+// color/ — photometric, HSV, colorspace, tone curves, arithmetic, dithering, PIL-like ops.
+#include "augmatch/color/color.hpp"
+#include "augmatch/color/colorspace.hpp"
+#include "augmatch/color/hsv.hpp"
+#include "augmatch/color/tone.hpp"
+#include "augmatch/color/arithmetic.hpp"
+#include "augmatch/color/dithering.hpp"
+#include "augmatch/color/pillike.hpp"
+
+// filter/ — convolution/blur, optical motion, aperture PSF, edges, superpixels, blending.
+#include "augmatch/filter/filter.hpp"
+#include "augmatch/filter/canny.hpp"
+#include "augmatch/filter/derivative.hpp"
+#include "augmatch/filter/superpixels.hpp"
+#include "augmatch/filter/voronoi.hpp"
+#include "augmatch/filter/blend.hpp"
+
+// sensor/ — physical sensor noise, noise views, ISO profiles, Bayer/CFA, native sensor API.
+#include "augmatch/sensor/noise.hpp"
+#include "augmatch/sensor/noise_view.hpp"
+#include "augmatch/sensor/iso_profile.hpp"
+#include "augmatch/sensor/bayer.hpp"
+#include "augmatch/sensor/native_api.hpp"
 #include "augmatch/sensor/api.hpp"
+
+// optics/ and isp/ — lens border helpers, demosaicing/quantization/clipping ISP artifacts.
 #include "augmatch/optics/api.hpp"
+#include "augmatch/isp/isp_artifacts.hpp"
 #include "augmatch/isp/api.hpp"
+
+// compression/ and video/ — JPEG, WebP, codec-independent transport corruption, video codecs.
+#include "augmatch/compression/jpeg.hpp"
+#include "augmatch/compression/webp.hpp"
+#include "augmatch/compression/transport.hpp"
 #include "augmatch/compression/api.hpp"
+#include "augmatch/video/video_codec.hpp"
 #include "augmatch/video/api.hpp"
-#include "augmatch/remaining_catalog.hpp"
-#include "augmatch/status.hpp"
-#include "augmatch/pixel.hpp"
-#include "augmatch/pillike.hpp"
-#include "augmatch/pipeline.hpp"
-#include "augmatch/pipeline_registry.hpp"
-#include "augmatch/signal.hpp"
-#include "augmatch/size.hpp"
-#include "augmatch/superpixels.hpp"
-#include "augmatch/voronoi.hpp"
-#include "augmatch/tone.hpp"
-#include "augmatch/target_metadata.hpp"
-#include "augmatch/transport.hpp"
-#include "augmatch/transforms.hpp"
-#include "augmatch/weather.hpp"
-#include "augmatch/webp.hpp"
-#include "augmatch/video_codec.hpp"
+
+// weather/ — rain, snow, fog, sun flare, shadows, environmental/acquisition effects.
+#include "augmatch/weather/weather.hpp"
+#include "augmatch/weather/environmental.hpp"
+
+// catalog/ — imgcorruptlike compatibility and the remaining imgaug catalog ops.
+#include "augmatch/catalog/imgcorruptlike.hpp"
+#include "augmatch/catalog/remaining_catalog.hpp"

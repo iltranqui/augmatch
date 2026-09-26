@@ -1,5 +1,5 @@
-#include "augmatch/tone.hpp"
-#include "augmatch/arithmetic.hpp"
+#include "augmatch/color/tone.hpp"
+#include "augmatch/color/arithmetic.hpp"
 #include "clahe_impl.hpp"
 #include <algorithm>
 #include <cstddef>

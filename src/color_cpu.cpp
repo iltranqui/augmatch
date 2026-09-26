@@ -1,4 +1,4 @@
-#include "augmatch/color.hpp"
+#include "augmatch/color/color.hpp"
 #include <algorithm>
 #include <cmath>
 #include <limits>

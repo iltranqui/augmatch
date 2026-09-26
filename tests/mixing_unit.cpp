@@ -1,4 +1,4 @@
-#include "augmatch/mixing.hpp"
+#include "augmatch/geometry/mixing.hpp"
 #include <cassert>
 #include <cstdint>
 #include <vector>

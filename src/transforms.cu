@@ -1,4 +1,4 @@
-#include "augmatch/transforms.hpp"
+#include "augmatch/annotations/transforms.hpp"
 #include <cuda_runtime.h>
 #include <stdexcept>
 #include <string>

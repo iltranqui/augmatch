@@ -1,4 +1,4 @@
-#include "augmatch/weather.hpp"
+#include "augmatch/weather/weather.hpp"
 #include <cuda_runtime.h>
 #include <cstdint>
 #include <stdexcept>

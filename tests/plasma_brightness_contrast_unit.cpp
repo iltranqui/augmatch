@@ -1,4 +1,4 @@
-#include "augmatch/color.hpp"
+#include "augmatch/color/color.hpp"
 #include <cstdint>
 #include <stdexcept>
 #include <vector>

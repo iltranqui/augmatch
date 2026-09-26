@@ -1,4 +1,4 @@
-#include "augmatch/noise.hpp"
+#include "augmatch/sensor/noise.hpp"
 #include <cmath>
 #include <vector>
 int main(){

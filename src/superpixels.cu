@@ -1,4 +1,4 @@
-#include "augmatch/superpixels.hpp"
+#include "augmatch/filter/superpixels.hpp"
 #include <cuda_runtime.h>
 #include <stdexcept>
 #include <string>

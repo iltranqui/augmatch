@@ -1,4 +1,4 @@
-#include "augmatch/iso_profile.hpp"
+#include "augmatch/sensor/iso_profile.hpp"
 #include <cassert>
 #include <cmath>
 #include <vector>

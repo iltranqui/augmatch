@@ -1,4 +1,4 @@
-#include "augmatch/bayer.hpp"
+#include "augmatch/sensor/bayer.hpp"
 #include <cmath>
 #include <cstdint>
 #include <iostream>

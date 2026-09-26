@@ -1,4 +1,4 @@
-#include "augmatch/environmental.hpp"
+#include "augmatch/weather/environmental.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <stdexcept>

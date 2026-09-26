@@ -1,5 +1,5 @@
-#include "augmatch/weather.hpp"
-#include "augmatch/imgcorruptlike.hpp"
+#include "augmatch/weather/weather.hpp"
+#include "augmatch/catalog/imgcorruptlike.hpp"
 
 #include <cassert>
 #include <cstdint>

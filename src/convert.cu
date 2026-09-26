@@ -1,4 +1,4 @@
-#include "augmatch/convert.hpp"
+#include "augmatch/core/convert.hpp"
 #include <cuda_runtime.h>
 #include <stdexcept>
 #include <string>

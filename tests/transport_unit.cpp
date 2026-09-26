@@ -1,4 +1,4 @@
-#include "augmatch/transport.hpp"
+#include "augmatch/compression/transport.hpp"
 #include <cassert>
 #include <cstdint>
 #include <iostream>

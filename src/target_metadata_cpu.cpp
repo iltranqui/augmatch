@@ -1,4 +1,4 @@
-#include "augmatch/target_metadata.hpp"
+#include "augmatch/annotations/target_metadata.hpp"
 
 #include <algorithm>
 #include <cmath>

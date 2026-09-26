@@ -1,4 +1,4 @@
-#include "augmatch/canny.hpp"
+#include "augmatch/filter/canny.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

@@ -1,4 +1,4 @@
-#include "augmatch/jpeg.hpp"
+#include "augmatch/compression/jpeg.hpp"
 #include <cuda_runtime.h>
 #include <cstdint>
 #include <iostream>

@@ -1,4 +1,4 @@
-#include "augmatch/jpeg.hpp"
+#include "augmatch/compression/jpeg.hpp"
 #include "jpeg_codec_impl.hpp"
 
 namespace augmatch {

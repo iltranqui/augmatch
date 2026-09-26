@@ -1,4 +1,4 @@
-#include "augmatch/video_codec.hpp"
+#include "augmatch/video/video_codec.hpp"
 #include <cassert>
 #include <cstdint>
 #include <iostream>

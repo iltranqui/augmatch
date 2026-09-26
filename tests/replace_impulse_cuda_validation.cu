@@ -1,4 +1,4 @@
-#include "augmatch/arithmetic.hpp"
+#include "augmatch/color/arithmetic.hpp"
 
 #include <cuda_runtime.h>
 

@@ -1,3 +1,3 @@
 #pragma once
-#include "augmatch/native_api.hpp"
+#include "augmatch/sensor/native_api.hpp"
 // Optical border policy and coordinate helpers.

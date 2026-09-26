@@ -1,4 +1,4 @@
-#include "augmatch/imgcorruptlike.hpp"
+#include "augmatch/catalog/imgcorruptlike.hpp"
 
 #include <algorithm>
 #include <cmath>

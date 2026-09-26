@@ -1,4 +1,4 @@
-#include "augmatch/pipeline.hpp"
+#include "augmatch/pipeline/pipeline.hpp"
 
 #include <cerrno>
 #include <cmath>
@@ -11,7 +11,7 @@
 #include <string>
 #include <utility>
 
-#include "augmatch/pipeline_registry.hpp"
+#include "augmatch/pipeline/pipeline_registry.hpp"
 
 namespace augmatch {
 namespace {

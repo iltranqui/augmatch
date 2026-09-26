@@ -1,4 +1,4 @@
-#include "augmatch/colorspace.hpp"
+#include "augmatch/color/colorspace.hpp"
 #include <cstdint>
 #include <vector>
 int main(){

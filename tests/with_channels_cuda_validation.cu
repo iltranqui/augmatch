@@ -1,4 +1,4 @@
-#include "augmatch/composition.hpp"
+#include "augmatch/pipeline/composition.hpp"
 
 #include <cuda_runtime.h>
 

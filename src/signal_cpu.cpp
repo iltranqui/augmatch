@@ -1,4 +1,4 @@
-#include "augmatch/signal.hpp"
+#include "augmatch/core/signal.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

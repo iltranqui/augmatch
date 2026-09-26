@@ -1,4 +1,4 @@
-#include "augmatch/pixel.hpp"
+#include "augmatch/core/pixel.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <stdexcept>

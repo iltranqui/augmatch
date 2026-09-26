@@ -1,4 +1,4 @@
-#include "augmatch/convert.hpp"
+#include "augmatch/core/convert.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

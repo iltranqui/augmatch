@@ -1,4 +1,4 @@
-#include "augmatch/derivative.hpp"
+#include "augmatch/filter/derivative.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <stdexcept>

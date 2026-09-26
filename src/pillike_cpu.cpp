@@ -1,4 +1,4 @@
-#include "augmatch/pillike.hpp"
+#include "augmatch/color/pillike.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>
