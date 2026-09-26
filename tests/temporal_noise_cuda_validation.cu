@@ -1,0 +1,5 @@
+#include "augmatch/noise.hpp"
+#include <cuda_runtime.h>
+#include <iostream>
+#include <vector>
+int main(){int count=0;if(cudaGetDeviceCount(&count)!=cudaSuccess||count==0)return 77;const int T=4,H=2,W=2,C=3;size_t n=(size_t)T*H*W*C;std::vector<float> h(n,.3f),o(n);float *di=nullptr,*do_=nullptr;if(cudaMalloc(&di,n*sizeof(float))!=cudaSuccess||cudaMalloc(&do_,n*sizeof(float))!=cudaSuccess)return 77;cudaMemcpy(di,h.data(),n*sizeof(float),cudaMemcpyHostToDevice);augmatch::TemporalGaussianNoiseConfig c;c.frames=T;c.height=H;c.width=W;c.channels=C;c.stddev=.1f;c.temporal_correlation=.6f;c.seed=17;try { augmatch::temporal_gaussian_noise_f32(di,do_,c); augmatch::RowNoisePhaseChangesConfig row;row.frames=T;row.height=H;row.width=W;row.channels=C;row.row_stddev=0.0f;row.phase_change_probability=.2f;row.temporal_correlation=.4f;row.seed=19;augmatch::row_noise_phase_changes_f32(di,do_,row); } catch(...) { cudaFree(di); cudaFree(do_); return 77; } if(cudaDeviceSynchronize()!=cudaSuccess)return 77;if(cudaMemcpy(o.data(),do_,n*sizeof(float),cudaMemcpyDeviceToHost)!=cudaSuccess)return 1;for(float v:o)if(v<0||v>1)return 2;cudaFree(di);cudaFree(do_);return 0;}

@@ -1,0 +1,10 @@
+build/
+build-*/
+__pycache__/
+*.raw
+*.ppm
+*.orig
+*:Zone.Identifier
+.cache/
+*.pyc
+/tasks/

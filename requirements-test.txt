@@ -1,0 +1,5 @@
+numpy==1.26.4
+albumentations==2.0.8
+opencv-python-headless==4.11.0.86
+torch==2.2.2
+imgaug==0.4.0

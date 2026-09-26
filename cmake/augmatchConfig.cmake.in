@@ -1,0 +1,31 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+if(@AUGMATCH_PACKAGE_HAS_VIDEO_CODEC@)
+  find_dependency(PkgConfig REQUIRED)
+  pkg_check_modules(AVCODEC REQUIRED IMPORTED_TARGET libavcodec libavutil libswscale)
+endif()
+include(CMakeFindDependencyMacro)
+
+# Dependencies are discovered only when the installed target was built with
+# the corresponding optional backend.  CPU-only consumers therefore do not
+# need CUDA, JPEG, or WebP development packages just to call find_package.
+set(_augmatch_has_jpeg "@AUGMATCH_PACKAGE_HAS_JPEG@")
+set(_augmatch_has_cuda "@AUGMATCH_PACKAGE_HAS_CUDA@")
+set(_augmatch_has_webp "@AUGMATCH_PACKAGE_HAS_WEBP@")
+set(augmatch_HAS_JPEG "${_augmatch_has_jpeg}")
+set(augmatch_HAS_CUDA "${_augmatch_has_cuda}")
+set(augmatch_HAS_WEBP "${_augmatch_has_webp}")
+if(_augmatch_has_jpeg)
+  find_dependency(JPEG)
+endif()
+if(_augmatch_has_cuda)
+  find_dependency(CUDAToolkit)
+endif()
+if(_augmatch_has_webp)
+  list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}")
+  find_dependency(WebP)
+  list(REMOVE_AT CMAKE_MODULE_PATH 0)
+endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/augmatchTargets.cmake")
+check_required_components(augmatch)

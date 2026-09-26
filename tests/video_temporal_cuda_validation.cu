@@ -1,0 +1,5 @@
+#include "augmatch/noise.hpp"
+#include <cuda_runtime.h>
+#include <iostream>
+#include <vector>
+int main(){int count=0;if(cudaGetDeviceCount(&count)!=cudaSuccess||count==0)return 77;const int T=3,H=2,W=2,C=1;const size_t n=(size_t)T*H*W*C;std::vector<float> h(n,.4f),o(n);float *di=nullptr,*doo=nullptr;if(cudaMalloc(&di,n*sizeof(float))!=cudaSuccess||cudaMalloc(&doo,n*sizeof(float))!=cudaSuccess)return 77;cudaMemcpy(di,h.data(),n*sizeof(float),cudaMemcpyHostToDevice);try{augmatch::DeadPixelPersistenceConfig d;d.frames=T;d.height=H;d.width=W;d.channels=C;d.probability=.25f;d.seed=8;augmatch::dead_pixel_persistence_f32(di,doo,d);if(cudaDeviceSynchronize()!=cudaSuccess)return 77;if(cudaMemcpy(o.data(),doo,n*sizeof(float),cudaMemcpyDeviceToHost)!=cudaSuccess)return 1;for(float v:o)if(v<0||v>1)return 2;augmatch::VideoRollingShutterConfig r;r.frames=T;r.height=H;r.width=W;r.channels=C;r.motion_dx=1;r.readout_fraction=1;augmatch::video_sensor_rolling_shutter_f32(di,doo,r);if(cudaDeviceSynchronize()!=cudaSuccess)return 77;}catch(...){cudaFree(di);cudaFree(doo);return 77;}cudaFree(di);cudaFree(doo);return 0;}
