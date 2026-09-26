@@ -1,4 +1,4 @@
-#include "augmatch/transport.hpp"
+#include "augmatch/compression/transport.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <stdexcept>

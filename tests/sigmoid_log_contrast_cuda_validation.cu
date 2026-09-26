@@ -1,4 +1,4 @@
-#include "augmatch/tone.hpp"
+#include "augmatch/color/tone.hpp"
 #include <cuda_runtime.h>
 #include <algorithm>
 #include <cmath>

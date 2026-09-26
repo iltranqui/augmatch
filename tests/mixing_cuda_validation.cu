@@ -1,4 +1,4 @@
-#include "augmatch/mixing.hpp"
+#include "augmatch/geometry/mixing.hpp"
 #include <cuda_runtime.h>
 #include <cassert>
 #include <exception>

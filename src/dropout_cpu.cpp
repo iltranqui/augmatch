@@ -1,4 +1,4 @@
-#include "augmatch/dropout.hpp"
+#include "augmatch/geometry/dropout.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

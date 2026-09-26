@@ -1,4 +1,4 @@
-#include "augmatch/remaining_catalog.hpp"
+#include "augmatch/catalog/remaining_catalog.hpp"
 #include <cassert>
 #include <cstdio>
 #include <vector>

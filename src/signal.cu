@@ -1,4 +1,4 @@
-#include "augmatch/signal.hpp"
+#include "augmatch/core/signal.hpp"
 #include <cuda_runtime.h>
 #include <stdexcept>
 #include <string>

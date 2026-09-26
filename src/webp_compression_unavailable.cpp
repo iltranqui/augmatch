@@ -1,4 +1,4 @@
-#include "augmatch/webp.hpp"
+#include "augmatch/compression/webp.hpp"
 #include <stdexcept>
 
 namespace augmatch {

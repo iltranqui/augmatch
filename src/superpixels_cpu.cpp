@@ -1,4 +1,4 @@
-#include "augmatch/superpixels.hpp"
+#include "augmatch/filter/superpixels.hpp"
 #include <algorithm>
 #include <cstddef>
 #include <stdexcept>

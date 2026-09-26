@@ -1,6 +1,6 @@
 #pragma once
 
-#include "augmatch/jpeg.hpp"
+#include "augmatch/compression/jpeg.hpp"
 #include <cstdio>
 #include <jpeglib.h>
 #include <csetjmp>

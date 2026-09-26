@@ -1,3 +1,3 @@
 #pragma once
-#include "augmatch/native_api.hpp"
+#include "augmatch/sensor/native_api.hpp"
 // Sensor views, profiles, workspaces, and fused acquisition pipelines.

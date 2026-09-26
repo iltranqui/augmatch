@@ -1,4 +1,4 @@
-#include "augmatch/colorspace.hpp"
+#include "augmatch/color/colorspace.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

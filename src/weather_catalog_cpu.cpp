@@ -1,4 +1,4 @@
-#include "augmatch/weather.hpp"
+#include "augmatch/weather/weather.hpp"
 
 #include <algorithm>
 #include <cmath>

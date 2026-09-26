@@ -1,4 +1,4 @@
-#include "augmatch/blend.hpp"
+#include "augmatch/filter/blend.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <stdexcept>

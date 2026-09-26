@@ -1,5 +1,5 @@
-#include "augmatch/pipeline.hpp"
-#include "augmatch/pipeline_registry.hpp"
+#include "augmatch/pipeline/pipeline.hpp"
+#include "augmatch/pipeline/pipeline_registry.hpp"
 
 #include <cmath>
 #include <cstdint>

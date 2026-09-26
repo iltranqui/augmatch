@@ -1,4 +1,4 @@
-#include "augmatch/dithering.hpp"
+#include "augmatch/color/dithering.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstddef>

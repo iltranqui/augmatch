@@ -1,4 +1,4 @@
-#include "augmatch/pipeline_registry.hpp"
+#include "augmatch/pipeline/pipeline_registry.hpp"
 
 #include <algorithm>
 #include <cmath>
@@ -10,10 +10,10 @@
 #include <utility>
 #include <vector>
 
-#include "augmatch/color.hpp"
-#include "augmatch/filter.hpp"
-#include "augmatch/hsv.hpp"
-#include "augmatch/transforms.hpp"
+#include "augmatch/color/color.hpp"
+#include "augmatch/filter/filter.hpp"
+#include "augmatch/color/hsv.hpp"
+#include "augmatch/annotations/transforms.hpp"
 #if AUGMATCH_HAS_CUDA
 #include "pipeline_host_primitives.hpp"
 #endif

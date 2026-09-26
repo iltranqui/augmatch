@@ -1,4 +1,4 @@
-#include "augmatch/mixing.hpp"
+#include "augmatch/geometry/mixing.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

@@ -1,4 +1,4 @@
-#include "augmatch/pillike.hpp"
+#include "augmatch/color/pillike.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <stdexcept>

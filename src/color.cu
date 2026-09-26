@@ -1,4 +1,4 @@
-#include "augmatch/color.hpp"
+#include "augmatch/color/color.hpp"
 #include <cuda_runtime.h>
 #include <stdexcept>
 #include <string>

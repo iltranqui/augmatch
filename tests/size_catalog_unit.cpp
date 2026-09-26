@@ -1,4 +1,4 @@
-#include "augmatch/size.hpp"
+#include "augmatch/geometry/size.hpp"
 #include <cassert>
 #include <cstdint>
 #include <vector>

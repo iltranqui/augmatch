@@ -1,4 +1,4 @@
-#include "augmatch/voronoi.hpp"
+#include "augmatch/filter/voronoi.hpp"
 #include <cassert>
 #include <cstdint>
 #include <vector>

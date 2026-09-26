@@ -1,4 +1,4 @@
-#include "augmatch/geometric.hpp"
+#include "augmatch/geometry/geometric.hpp"
 #include <cuda_runtime.h>
 #include <algorithm>
 #include <cmath>

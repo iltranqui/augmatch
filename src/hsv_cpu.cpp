@@ -1,4 +1,4 @@
-#include "augmatch/hsv.hpp"
+#include "augmatch/color/hsv.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

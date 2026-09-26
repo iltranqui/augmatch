@@ -1,4 +1,4 @@
-#include "augmatch/blend.hpp"
+#include "augmatch/filter/blend.hpp"
 #include <cassert>
 #include <cstdint>
 #include <vector>

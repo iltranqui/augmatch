@@ -1,4 +1,4 @@
-#include "augmatch/voronoi.hpp"
+#include "augmatch/filter/voronoi.hpp"
 #include <cuda_runtime.h>
 #include <algorithm>
 #include <cmath>

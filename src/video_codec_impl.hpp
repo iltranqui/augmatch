@@ -1,5 +1,5 @@
 #pragma once
-#include "augmatch/video_codec.hpp"
+#include "augmatch/video/video_codec.hpp"
 #include <algorithm>
 #include <stdexcept>
 #include <string>

@@ -1,4 +1,4 @@
-#include "augmatch/dithering.hpp"
+#include "augmatch/color/dithering.hpp"
 #include <cuda_runtime.h>
 #include <cmath>
 #include <cstddef>

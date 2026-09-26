@@ -1,7 +1,7 @@
-#include "augmatch/image.hpp"
-#include "augmatch/noise_view.hpp"
-#include "augmatch/target_metadata.hpp"
-#include "augmatch/transforms.hpp"
+#include "augmatch/core/image.hpp"
+#include "augmatch/sensor/noise_view.hpp"
+#include "augmatch/annotations/target_metadata.hpp"
+#include "augmatch/annotations/transforms.hpp"
 
 #include <algorithm>
 #include <cmath>

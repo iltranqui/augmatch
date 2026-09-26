@@ -1,4 +1,4 @@
-#include "augmatch/canny.hpp"
+#include "augmatch/filter/canny.hpp"
 #include <cuda_runtime.h>
 #include <cstdint>
 #include <cstdio>

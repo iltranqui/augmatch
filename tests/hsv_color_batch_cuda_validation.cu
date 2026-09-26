@@ -1,4 +1,4 @@
-#include "augmatch/hsv.hpp"
+#include "augmatch/color/hsv.hpp"
 #include <cuda_runtime.h>
 #include <cstdint>
 #include <vector>

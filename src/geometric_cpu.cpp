@@ -1,4 +1,4 @@
-#include "augmatch/geometric.hpp"
+#include "augmatch/geometry/geometric.hpp"
 #include <algorithm>
 #include <cmath>
 #include <limits>

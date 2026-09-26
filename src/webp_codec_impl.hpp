@@ -1,6 +1,6 @@
 #pragma once
 
-#include "augmatch/webp.hpp"
+#include "augmatch/compression/webp.hpp"
 #include <webp/decode.h>
 #include <webp/encode.h>
 #include <algorithm>

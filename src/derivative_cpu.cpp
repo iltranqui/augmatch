@@ -1,4 +1,4 @@
-#include "augmatch/derivative.hpp"
+#include "augmatch/filter/derivative.hpp"
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>

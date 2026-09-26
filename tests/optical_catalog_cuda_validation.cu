@@ -1,6 +1,6 @@
-#include "augmatch/filter.hpp"
-#include "augmatch/color.hpp"
-#include "augmatch/geometric.hpp"
+#include "augmatch/filter/filter.hpp"
+#include "augmatch/color/color.hpp"
+#include "augmatch/geometry/geometric.hpp"
 #include <cuda_runtime.h>
 #include <vector>
 int main(){int devices=0;if(cudaGetDeviceCount(&devices)!=cudaSuccess||devices==0)return 77;const int w=7,h=5,ch=3;const std::size_t n=static_cast<std::size_t>(w)*h*ch;std::vector<unsigned char> host(n,90),result(n);std::vector<float> rows(h,0);unsigned char *di=nullptr,*do_=nullptr;float *dx=nullptr,*dy=nullptr;cudaMalloc(&di,n);cudaMalloc(&do_,n);cudaMalloc(&dx,h*sizeof(float));cudaMalloc(&dy,h*sizeof(float));cudaMemcpy(di,host.data(),n,cudaMemcpyHostToDevice);cudaMemcpy(dx,rows.data(),h*sizeof(float),cudaMemcpyHostToDevice);cudaMemcpy(dy,rows.data(),h*sizeof(float),cudaMemcpyHostToDevice);

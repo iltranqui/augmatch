@@ -1,4 +1,4 @@
-#include "augmatch/meta.hpp"
+#include "augmatch/pipeline/meta.hpp"
 
 #include <cmath>
 #include <cstdint>
