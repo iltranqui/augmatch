@@ -8,3 +8,9 @@ __pycache__/
 .cache/
 *.pyc
 /tasks/
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
